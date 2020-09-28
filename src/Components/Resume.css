@@ -1,0 +1,53 @@
+.resume {
+  width: 100%;
+  min-height: 30vh;
+  padding: 2rem 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+.resume::before {
+  content: "";
+  background: var(--about) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.resume__copy {
+  margin: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.resume__copy > a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1.5s cubic-bezier(0.8, -0.5, 0.2, 1.4);
+}
+
+.resumeBtn__appearEffect {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.resume__copy > a:hover {
+  transition: all 0.5s ease !important;
+  background-color: hsl(0, 0%, 40%);
+  padding: 0.8rem 3rem;
+}

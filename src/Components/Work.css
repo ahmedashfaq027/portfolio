@@ -1,0 +1,126 @@
+.work {
+  flex: 1 1 20rem;
+  min-height: 9rem;
+  min-width: 18rem;
+  max-width: 30rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.work::after {
+  content: "";
+  display: grid;
+  padding-top: 50.25%;
+}
+
+.work__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.work__foreground {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+
+  transition: all 0.3s ease;
+}
+
+.work__link {
+  display: grid;
+  place-items: center;
+  margin: 0.7rem 1rem;
+  height: 70%;
+  width: 100%;
+
+  text-decoration: none;
+  color: rgb(206, 205, 205);
+
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.work__link p {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.work__link p > i {
+  margin-right: 0.5rem;
+}
+
+.work__name {
+  height: 0%;
+  width: 100%;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  background-color: rgb(212, 67, 67);
+  transition: height 0.4s ease;
+}
+
+.work:hover .work__foreground {
+  opacity: 1;
+}
+
+.work:hover .work__link {
+  animation: topBottom 1s forwards;
+}
+
+.work:hover .work__name > p {
+  animation: bottomTop 1s forwards;
+}
+
+.work:hover .work__name {
+  height: 30%;
+  animation: card 1s forwards;
+}
+
+@keyframes topBottom {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottomTop {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes card {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

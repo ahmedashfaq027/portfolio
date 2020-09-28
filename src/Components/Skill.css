@@ -1,0 +1,38 @@
+.skill__container {
+  flex: 1 1 4rem;
+  min-height: 5rem;
+  min-width: 5rem;
+  max-width: 8rem;
+  color: hsl(0, 0%, 20%);
+  display: grid;
+  place-items: center;
+  font-size: xx-large;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.skill__container > i {
+  font-size: 4rem;
+  transition: color 0.5s ease;
+}
+
+.skill__container > p {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-family: "Peddana";
+  font-weight: 600;
+  opacity: 0;
+  color: black;
+  transition: opacity 0.8s ease;
+}
+
+.skill__container:hover .skill__name {
+  opacity: 1;
+}
+
+.skill__name:hover {
+  color: black !important;
+}

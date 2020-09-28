@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Devonshire;
+  src: url("../fonts/Devonshire-Regular.ttf");
+}
+
+@font-face {
+  font-family: Lobster;
+  src: url("../fonts/Lobster-Regular.ttf");
+}
+
+@font-face {
+  font-family: Peddana;
+  src: url("../fonts/Peddana-Regular.ttf");
+}
+
+@font-face {
+  font-family: Heebo;
+  src: url("../fonts/Heebo-VariableFont.ttf");
+}

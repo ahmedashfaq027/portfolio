@@ -1,0 +1,98 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem;
+  background-color: hsl(0, 0%, 5%);
+  color: white;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 0.5rem;
+  margin: 2rem;
+}
+
+.social a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social > .link {
+  padding: 1rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: hsl(0, 0%, 10%);
+  display: grid;
+  place-items: center;
+  font-size: x-large;
+  transition: all 0.5s ease;
+
+  flex: 0 1 3.5rem;
+}
+
+.social > .link > * {
+  pointer-events: none;
+}
+
+.social > .link:hover {
+  background-color: hsl(0, 0%, 25%);
+  transform: scale(1.12);
+  cursor: pointer;
+}
+
+.scotty {
+  height: 3.5rem;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.scottyText {
+  margin-top: -0.5rem;
+  font-size: 0.7rem;
+  transition: animation 0.3s ease;
+  visibility: hidden;
+  animation: none;
+}
+
+.goTop:hover .scotty {
+  filter: none;
+}
+
+.goTop:hover .scottyText {
+  visibility: visible;
+  animation: scotty 1s ease-in alternate infinite;
+}
+
+.copyrightInfo {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+  /* white-space: nowrap; */
+  margin-bottom: -0.5rem;
+  font-size: small;
+}
+
+@keyframes scotty {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .social {
+    margin: 1.3rem;
+  }
+}

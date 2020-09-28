@@ -1,0 +1,148 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  color: white;
+  padding: 0.3rem 0;
+  margin-top: 0.5rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.7s ease;
+
+  overflow: -moz-hidden-unscrollable;
+}
+
+.logo {
+  margin: 0 2rem;
+  font-size: medium;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Lobster;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  font-size: clamp(0.8rem, 10%, 1rem);
+}
+
+.logo > img {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav-links li {
+  height: 100%;
+  margin: 0 1.6rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s ease;
+}
+
+.active {
+  color: rgb(255, 145, 0);
+  font-weight: 800;
+}
+
+.nav-links li:hover {
+  cursor: pointer;
+  color: rgb(121, 121, 121);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  cursor: pointer;
+  display: none;
+
+  position: relative;
+}
+
+.hamburger div {
+  height: 0.2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  margin: 0.18rem 0;
+  pointer-events: none;
+}
+
+@media (max-width: 925px) {
+  .nav-links {
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    height: 50vh;
+    padding: 0 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+
+    z-index: 10;
+    display: none;
+
+    transition: all 1s ease !important;
+  }
+
+  .show__navLinks {
+    display: flex !important;
+    animation: navFade 1s ease;
+  }
+
+  .nav-links li {
+    display: grid;
+    place-items: center;
+
+    margin: 0;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@keyframes navFade {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scaleY(0);
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) scaleY(1) !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .logo {
+    margin: 0 0.8rem;
+    font-size: small;
+  }
+
+  .logo > img {
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .hamburger {
+    margin-right: 0.8rem;
+  }
+
+  .nav-links {
+    top: 3rem;
+  }
+}

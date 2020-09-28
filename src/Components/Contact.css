@@ -1,0 +1,262 @@
+.contact {
+  background-color: rgb(226, 226, 226);
+  min-height: 60vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__description {
+  margin-top: -1rem;
+  text-align: center;
+}
+
+.contact__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 2rem 0;
+  flex: 1;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  margin: 1rem 0;
+  margin-right: 2rem;
+}
+
+.fa-envelope,
+.fa-paper-plane {
+  font-size: 3rem;
+}
+
+.form__top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form__message {
+  flex: 1;
+
+  display: flex;
+
+  border-radius: 3px;
+  padding: 0.1rem 0.6rem;
+  position: relative;
+  border: 1px solid black;
+  font-size: small;
+  max-width: 20rem;
+  transition: all 0.3s ease;
+
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+
+  transform: translateY(-80%);
+  opacity: 0;
+}
+
+.message__active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.form__message > button {
+  background-color: transparent;
+  border: none;
+  font-size: x-small;
+  font-weight: 800;
+
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  cursor: pointer;
+}
+
+.form__errorMessage > button:focus {
+  outline: none;
+}
+
+.fa-envelope {
+  flex: 0.34;
+}
+
+.contact__form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__row {
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.form__row label {
+  flex: 0.3;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.form__row label > span {
+  color: rgb(212, 67, 67);
+}
+
+.form__row input,
+.form__row textarea {
+  flex: 1;
+  width: 20rem;
+  outline: 0;
+}
+
+.form__row input:focus,
+.form__row textarea:focus {
+  outline: none;
+  background-color: rgb(218, 255, 148);
+}
+
+.form__row input {
+  height: 2rem;
+  padding: 1rem;
+}
+
+.form__row textarea {
+  padding: 1rem;
+}
+
+.form__submit {
+  margin-top: 1rem;
+  margin-left: 6.3rem;
+  padding: 0.6rem 2rem;
+  width: fit-content;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 1px transparent black;
+
+  transform: translateX(-300%);
+  transition: all 0.7s cubic-bezier(0, 0.76, 0.39, 1);
+}
+
+.submit__appearEffect {
+  transform: translateX(0);
+}
+
+.form__submit:hover {
+  color: white;
+  background-color: rgb(28, 28, 255);
+}
+
+.contact__email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email__container {
+  width: 100%;
+  border: 2px dashed gray;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email__container > i {
+  align-self: center;
+  margin: 0.5rem 0;
+
+  transform: translateY(-1000%);
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.13, 0.1, 0.9, 0.2);
+}
+
+.plane__appearEffect {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.email__container > .section__header {
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
+.email__container > a {
+  text-decoration: none;
+  color: black;
+  padding: 0.7rem 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+  text-transform: uppercase;
+  transition: color, background-color 0.5s ease;
+}
+
+.email__container > a:hover {
+  color: white;
+  background-color: rgb(28, 28, 255);
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+  }
+
+  .email__container {
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+  }
+
+  .contact__form {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .form__row input,
+  .form__row textarea {
+    width: 15rem;
+  }
+
+  .form__row label {
+    flex: 0.4;
+  }
+
+  .contact__form {
+    margin: 0.5rem 0;
+  }
+
+  .fa-envelope {
+    flex: 0.45;
+  }
+}
+
+@media (max-width: 350px) {
+  .form__row input,
+  .form__row textarea {
+    width: 12rem;
+  }
+
+  .form__row label {
+    flex: 0.5;
+  }
+
+  .fa-envelope {
+    flex: 0.55;
+  }
+
+  .contact__form {
+    margin: 0;
+  }
+}

@@ -1,0 +1,30 @@
+.works {
+  background-color: white;
+  min-height: 90vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.works__description {
+  margin-top: -1rem;
+  color: #686868;
+}
+
+.works__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-gap: 1.8rem;
+  padding: 2rem;
+  width: 100%;
+
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.works__appearEffect {
+  opacity: 1;
+}

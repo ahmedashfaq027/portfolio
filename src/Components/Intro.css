@@ -1,0 +1,47 @@
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+
+  /* debug */
+  display: none;
+}
+
+.intro__textContent {
+  text-transform: uppercase;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 550px) {
+  .intro__textContent {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .intro {
+    line-height: 2rem;
+  }
+
+  .intro__textContent {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .intro__textContent {
+    font-size: 0.5em;
+  }
+}
