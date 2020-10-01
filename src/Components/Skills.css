@@ -18,19 +18,31 @@
   margin: 3rem;
 }
 
+.skills__section > .section__header {
+  font-size: 1.3rem;
+  margin: 0rem 2rem;
+  margin-top: 1rem;
+  text-align: start;
+}
+
 .skills__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  grid-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
   margin: 1rem 0;
-  width: 70%;
+  width: 100%;
+
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.skills__appearEffect {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
-  .skills__container {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  .skills__section {
+    margin: 1.5rem;
   }
 }

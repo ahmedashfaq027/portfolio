@@ -14,8 +14,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  grid-gap: 0.5rem;
+  width: 90%;
   margin: 2rem;
+}
+
+.social > a {
+  margin: 0.18rem;
 }
 
 .social a {
@@ -28,8 +32,10 @@
   height: 3.5rem;
   width: 3.5rem;
   background-color: hsl(0, 0%, 10%);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* place-items: center; */
   font-size: x-large;
   transition: all 0.5s ease;
 

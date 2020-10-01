@@ -139,7 +139,7 @@
   width: fit-content;
   font-size: 0.9rem;
   text-transform: uppercase;
-  border: 1px transparent black;
+  border: 1px solid black;
 
   transform: translateX(-300%);
   transition: all 0.7s cubic-bezier(0, 0.76, 0.39, 1);

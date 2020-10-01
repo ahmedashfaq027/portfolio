@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PORTFOLIO APP made with React.js
 
-## Available Scripts
+This app is live [here](https://aahmed.netlify.app/).
 
-In the project directory, you can run:
+## `Description`
 
-### `npm start`
+This is a portfolio app made with React.js with some basic transitions. The app is super responsive till 300px width (actually 290px width) of screen-size.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The contact section of the portfolio has a form which uses Email.js to collect the responses and send it to your email. Only 2 successful responses are allowed per 24 hrs so as to limit the spammers submissions. The free email.js version has a limit of only 100 emails/month. People can even send you email by clicking on **`SAY HELLO`** button in the contact section. Social links are embedded as icons in the footer section.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## You can make your own portfolio by modifying few things from the public directory:
 
-### `npm test`
+- **resumeData.json**: Modify it with your personal data.
+- **favicon.png | favicon-black.png**: Modify it with your logo.
+- **img**: Replace back-1.jpg, back-2.jpg and profile-pic.jpg.
+- **img/works**: Replace it with screenshots of your works.
+- **img/skills**: Add svg icons of the skill that you have but are not present in the directory. Some popular icons can be found [here](https://worldvectorlogo.com/search/).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Detailed information on modification of resumeData.json:
 
-### `npm run build`
+- **name**: Replace the contents of firstName and lastName with your details.
+- **logo**: This logo is the one that appears in the header. This logo is picked up from public directory.
+- **profilePic**: This image will be picked from public/img directory. If correct image is not specified, avatar icon will be displayed.
+- **emailId**: EmailId will be used in the contact section on **SAY HELLO** button
+- **resume**: Specify your resume.pdf file name. This will be picked up from public directory.
+- **backgrounds**: Specify tthe home and resume with the backgrounds you want to use. This will be picked up from public directory.
+- **about**: All the values from here are used as description to respective sections.
+- **skills**: These are the svg icon name present in public/img/skills directory. If there's no svg icon present in there, please add it yourself and add it to the skills section in resumeData.json.
+- **works**: The keys in this array are name, description, image and url. Specify the name, description, image and url respective to your work and image should be added to public/img/works directory.
+- **social**: The keys in this array are name, icon, color and url. Specify the name of the social media, icon respective to font-awesome(Some of the brand icons are present in FontAwesome-icons.pdf in this repo), url of the respective social media, color ([Brand color](https://brandcolors.net/) which will be displayed on hover).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## `Deployment`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Netlify:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run the command `npm run build` once you modify the public directory contents. A build directory will be generated in the root directory of the project. Drag and Drop this build folder to Netlify.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+_There you go, Your portfolio app is live!_

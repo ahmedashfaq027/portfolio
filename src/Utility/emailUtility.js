@@ -38,10 +38,10 @@ function getWithExpiry(key) {
 export { setWithExpiry, getWithExpiry };
 
 async function emailUtility(name, email, phone, subject, message) {
-  await emailjs
+  const resp = await emailjs
     .send(
-      process.env.SERVICEID,
-      process.env.TEMPLATEID,
+      process.env.REACT_APP_SERVICEID,
+      process.env.REACT_APP_TEMPLATEID,
       {
         subject: subject,
         name: name,
@@ -49,17 +49,19 @@ async function emailUtility(name, email, phone, subject, message) {
         phone: phone,
         message: message,
       },
-      process.env.USERID
+      process.env.REACT_APP_USERID
     )
     .then(
       function (response) {
-        return true;
+        return response;
       },
       function (err) {
-        return false;
+        return err;
       }
     );
 
+  console.log(resp);
+  return resp;
   // Sample response --> msgStatus = {status: 200, text: "OK"}
 }
 

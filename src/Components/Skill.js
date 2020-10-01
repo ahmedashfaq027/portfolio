@@ -3,14 +3,12 @@ import "./Skill.css";
 
 function Skill({ skill }) {
   return (
-    <div
-      key={skill.name}
-      onMouseOver={(e) => (e.target.style.color = skill.color)}
-      onMouseOut={(e) => (e.target.style.color = "")}
-      className={`skill__container ${skill.name}`}
-    >
-      <i className={`${skill.icon}`}></i>
-      <p className="skill__name">{skill.name}</p>
+    <div key={skill.name} className="skill">
+      <img
+        src={`${process.env.PUBLIC_URL}/img/skills/${skill}.svg`}
+        alt=""
+        className={`${skill}`}
+      ></img>
     </div>
   );
 }

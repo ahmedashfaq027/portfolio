@@ -1,16 +1,18 @@
 .work {
-  flex: 1 1 20rem;
+  flex: 1 1 18rem;
   min-height: 9rem;
   min-width: 18rem;
   max-width: 30rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* place-items: center; */
   position: relative;
+  margin: 1rem;
 }
 
 .work::after {
   content: "";
-  display: grid;
   padding-top: 50.25%;
 }
 
@@ -40,8 +42,10 @@
 }
 
 .work__link {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* place-items: center; */
   margin: 0.7rem 1rem;
   height: 70%;
   width: 100%;
@@ -71,8 +75,10 @@
   height: 0%;
   width: 100%;
   text-transform: uppercase;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* place-items: center; */
   background-color: rgb(212, 67, 67);
   transition: height 0.4s ease;
 }

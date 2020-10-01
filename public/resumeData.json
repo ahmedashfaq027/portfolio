@@ -3,7 +3,7 @@
     "firstName": "Ashfaq Ahmed",
     "lastName": "Mohammed"
   },
-  "logo": "favicon-white.png",
+  "logo": "favicon.png",
   "profilePic": "profile-pic.jpg",
   "emailId": "ahmedashfaq027@gmail.com",
   "resume": "/resume.pdf",
@@ -20,51 +20,27 @@
     "getInTouchDescription": "Whether you have an idea for a project or just want to chat, feel free to write to me or shoot me an email!"
   },
   "skills": [
-    {
-      "name": "Html5",
-      "icon": "icon-html5-alt",
-      "color": "#e34f26"
-    },
-    {
-      "name": "Css3",
-      "icon": "icon-css3-alt",
-      "color": "#264de4"
-    },
-    {
-      "name": "Javascript",
-      "icon": "icon-javascript-alt",
-      "color": "#f7df1e"
-    },
-    {
-      "name": "Java",
-      "icon": "icon-java-bold",
-      "color": "#45a5d4 "
-    },
-    {
-      "name": "NodeJS",
-      "icon": "icon-nodejs",
-      "color": "#44883e"
-    },
-    {
-      "name": "jQuery",
-      "icon": "icon-jquery",
-      "color": "#45a5d4 "
-    },
-    {
-      "name": "ReactJS",
-      "icon": "icon-reactjs",
-      "color": "#00d8ff"
-    },
-    {
-      "name": "MongoDB",
-      "icon": "icon-mongodb",
-      "color": "#589636"
-    },
-    {
-      "name": "MySQL",
-      "icon": "icon-mysql",
-      "color": "#00758f"
-    }
+    "html5",
+    "css3",
+    "javascript",
+    "c",
+    "c++",
+    "csharp",
+    "java",
+    "jquery",
+    "reactjs",
+    "nodejs",
+    "expressjs",
+    "firebase",
+    "mongodb",
+    "mysql",
+    "mssql",
+    "docker",
+    "adobe-xd",
+    "photoshop-cc",
+    "selenium",
+    "python",
+    "linux"
   ],
   "works": [
     {
@@ -175,12 +151,6 @@
       "name": "linkedin",
       "icon": "fa-linkedin-in",
       "color": "#0077b5",
-      "url": "https://www.linkedin.com/in/ashfaq-mohammed-70367b158/"
-    },
-    {
-      "name": "youtube",
-      "icon": "fa-youtube",
-      "color": "#ff0000",
       "url": "https://www.linkedin.com/in/ashfaq-mohammed-70367b158/"
     }
   ]

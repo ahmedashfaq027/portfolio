@@ -92,7 +92,7 @@
     justify-content: space-evenly;
     background-color: black;
 
-    z-index: 10;
+    z-index: 100;
     display: none;
 
     transition: all 1s ease !important;
@@ -100,12 +100,13 @@
 
   .show__navLinks {
     display: flex !important;
-    animation: navFade 1s ease;
+    animation: navFade 0.6s ease;
   }
 
   .nav-links li {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin: 0;
     padding: 0.5rem 0.5rem;
@@ -127,9 +128,9 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 368px) {
   .logo {
-    margin: 0 0.8rem;
+    margin: 0 1rem;
     font-size: small;
   }
 
@@ -144,5 +145,11 @@
 
   .nav-links {
     top: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    font-size: 0.7rem;
   }
 }

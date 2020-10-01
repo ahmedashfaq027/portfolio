@@ -4,6 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  width: 60%;
+  margin: 0.5rem auto;
 }
 
 .about__profilePhoto {
@@ -17,13 +20,25 @@
   transition: all 2s ease;
 }
 
+.about__profilePhoto::before {
+  content: "";
+  background: url("/img/avatar.png") no-repeat center center/contain;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 10rem;
+  z-index: -1;
+}
+
 .about__appearEffect {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
 
 .about__description {
-  text-align: justify;
+  text-align: center;
   margin: 1rem 3rem;
   font-family: "Heebo", sans-serif;
 
@@ -39,4 +54,28 @@
   transform: translateY(50px);
   opacity: 0;
   transition: all 2s ease;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    width: 70%;
+  }
+}
+
+@media (max-width: 860px) {
+  .about {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    width: 100%;
+  }
 }

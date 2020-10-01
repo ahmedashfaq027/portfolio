@@ -2,8 +2,10 @@
   width: 100%;
   min-height: 30vh;
   padding: 2rem 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* place-items: center; */
   color: white;
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
@@ -26,8 +28,10 @@
 
 .resume__copy {
   margin: 1rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* place-items: center; */
 }
 
 .resume__copy > a {

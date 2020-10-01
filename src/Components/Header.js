@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import smoothScroll from "../Utility/scrollUtility";
 import "./Header.css";
 
-function Header({ logo }) {
+function Header({ logo, name }) {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isTop, setIsTop] = useState(true);
   const navLinksRef = useRef(null);
@@ -49,7 +49,7 @@ function Header({ logo }) {
     >
       <a href="/" className="logo">
         <img src={`${process.env.PUBLIC_URL}/${logo}`} alt="" />
-        <h1>Ashfaq Ahmed</h1>
+        <h1>{name?.firstName}</h1>
       </a>
       <ul className="nav-links" ref={navLinksRef}>
         <li onClick={(e) => smoothScroll(".about", 1000)}>About</li>

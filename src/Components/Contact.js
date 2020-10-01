@@ -26,17 +26,15 @@ function Contact({ nameProp, emailId, about }) {
       return;
     }
 
-    let store = "portfolioidinlocalstoragewithkeyvalue";
-
-    if (!getWithExpiry(store)) {
-      setWithExpiry(store);
+    if (!getWithExpiry(process.env.REACT_APP_LOCALSTORAGEID)) {
+      setWithExpiry(process.env.REACT_APP_LOCALSTORAGEID);
     }
 
-    if (getWithExpiry(store) < 2) {
-      const some = await emailUtility(name, email, phone, subject, message);
-
-      if (some) {
-        setWithExpiry(store);
+    if (getWithExpiry(process.env.REACT_APP_LOCALSTORAGEID) < 2) {
+      let some = await emailUtility(name, email, phone, subject, message);
+      console.log(some);
+      if (some.status === 200) {
+        setWithExpiry(process.env.REACT_APP_LOCALSTORAGEID);
         const messageEl = document.querySelector(".form__message");
         messageEl.querySelector(
           "p"
@@ -44,6 +42,12 @@ function Contact({ nameProp, emailId, about }) {
         messageEl.style.setProperty("background-color", "#DFF2BF");
         messageEl.style.setProperty("color", "#4F8A10");
         messageEl.classList.add("message__active");
+
+        setName("");
+        setEmail("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
       } else {
         const messageEl = document.querySelector(".form__message");
         messageEl.querySelector(

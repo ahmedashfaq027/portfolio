@@ -1,7 +1,9 @@
 .home {
   min-height: 90vh;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
 }
@@ -21,7 +23,7 @@
 
 .home::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.75);
 
   position: absolute;
   top: 0%;

@@ -3,18 +3,19 @@ import "./App.css";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Intro from "./Components/Intro";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
 import Works from "./Components/Works";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
-import { Timeline } from "gsap/gsap-core";
+import smoothScroll from "smoothscroll-polyfill";
 
 function App() {
   const [resumeData, setResumeData] = useState({});
 
   useEffect(() => {
+    smoothScroll.polyfill();
+
     const getJsonData = async () => {
       await fetch(`${process.env.PUBLIC_URL}/resumeData.json`)
         .then((data) => data.json())
@@ -24,6 +25,9 @@ function App() {
   }, []);
 
   useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
     const navLinks = document.querySelectorAll(".nav-links li");
 
     window.addEventListener("scroll", () => {
@@ -68,7 +72,7 @@ function App() {
   return (
     <div className="app">
       {/* <Intro /> */}
-      <Header logo={resumeData.logo} />
+      <Header logo={resumeData.logo} name={resumeData.name} />
       <Home
         name={resumeData.name}
         background={resumeData.backgrounds}
@@ -79,7 +83,7 @@ function App() {
       <Resume resume={resumeData.resume} background={resumeData.backgrounds} />
       <Works works={resumeData.works} about={resumeData.about} />
       <Contact
-        name={resumeData.name}
+        nameProp={resumeData.name}
         emailId={resumeData.emailId}
         about={resumeData.about}
       />

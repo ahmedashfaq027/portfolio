@@ -34,8 +34,8 @@ function validateMessage(message) {
   count = count.replace(/\n /, "\n");
   count = count.split(" ").length;
 
-  if (count < 20) {
-    return [false, "Message cannot be less than 20 words"];
+  if (count < 2) {
+    return [false, "Message cannot be less than 2 words"];
   } else {
     return [true, "valid message"];
   }
