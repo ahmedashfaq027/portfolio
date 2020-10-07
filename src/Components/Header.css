@@ -1,11 +1,17 @@
 .header {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0;
+  margin-top: 0.5rem;
+}
+
+.header .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
-  color: white;
-  padding: 0.3rem 0;
-  margin-top: 0.5rem;
+
   width: 100%;
   position: sticky;
   top: 0;
