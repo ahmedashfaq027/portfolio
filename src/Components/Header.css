@@ -1,17 +1,21 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: transparent;
   color: white;
+  display: flex;
+  align-items: center;
   padding: 0.3rem 0;
   margin-top: 0.5rem;
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 100;
   transition: all 0.7s ease;
+}
 
+.header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   overflow: -moz-hidden-unscrollable;
 }
 
@@ -144,7 +148,7 @@
   }
 
   .nav-links {
-    top: 3rem;
+    top: 2.6rem;
   }
 }
 

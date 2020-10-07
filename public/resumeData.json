@@ -62,6 +62,18 @@
       "url": "https://covid-19-tracker-ash.web.app/"
     },
     {
+      "name": "Coloors",
+      "description": "Coloors is a UI color picker app which can store color palettes. It uses localstorage to store the palettes.",
+      "image": "coloors.png",
+      "url": "https://coloors-ash.netlify.app/"
+    },
+    {
+      "name": "Beat maker",
+      "description": "Beat maker can make music with different Kick, snare and hihat sound effects with different tempos.",
+      "image": "beatmaker.png",
+      "url": "https://thirsty-hugle-4df259.netlify.app/"
+    },
+    {
       "name": "Facebook Clone",
       "description": "Facebook clone made with ReactJS. Uses google firebase authentication and firestore to store the posts",
       "image": "facebook-clone.png",

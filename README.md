@@ -2,7 +2,7 @@
 
 <img src="preview.png">
 
-View it online [here](https://aahmed.netlify.app/).
+View this project live [here](https://aahmed.netlify.app/).
 
 ## Why this template
 

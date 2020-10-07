@@ -1,6 +1,6 @@
 .resume {
   width: 100%;
-  min-height: 30vh;
+  min-height: 50vh;
   padding: 2rem 0;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-
+  filter: blur(6px);
   position: absolute;
   top: 0;
   left: 0;
@@ -26,12 +26,15 @@
   z-index: -2;
 }
 
+.resume__container .section__header {
+  margin: 3rem;
+}
+
 .resume__copy {
   margin: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* place-items: center; */
 }
 
 .resume__copy > a {
