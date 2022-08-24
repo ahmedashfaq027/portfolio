@@ -58,8 +58,14 @@ function About({ profilePic, about }) {
         src={`${process.env.PUBLIC_URL}/img/${profilePic}`}
         alt=""
       />
-      <p className="about__description">{about?.description}</p>
-      <p className="about__hobbies">{about?.hobbies}</p>
+      <div className="about__description">
+        {about?.description &&
+          about.description.split("\n").map((para) => <p>{para}</p>)}
+      </div>
+      <div className="about__hobbies">
+        {about?.hobbies &&
+          about.hobbies.split("\n").map((para) => <p>{para}</p>)}
+      </div>
     </div>
   );
 }
